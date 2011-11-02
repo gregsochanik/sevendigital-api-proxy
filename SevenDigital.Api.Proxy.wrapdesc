@@ -1,0 +1,4 @@
+﻿name: SevenDigital.Api.Proxy
+depends: openwrap anchored content
+depends: openrasta-full
+depends: openrasta-aspnet

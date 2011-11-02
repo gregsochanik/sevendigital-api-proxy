@@ -1,0 +1,15 @@
+_ReSharper*
+*.user
+*.suo
+*.pidb
+*.userprefs
+*.dotCover
+obj
+bin
+Bin
+logs
+ndepend
+log-file.txt
+.idea
+*.cache
+build/spec/report.html
