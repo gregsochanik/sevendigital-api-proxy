@@ -48,9 +48,6 @@
     <Reference Include="OpenRasta.DI.Windsor">
       <HintPath>..\..\wraps\_cache\openrasta-castle-windsor-2.1.0.87856780\bin-net35\OpenRasta.DI.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="SevenDigital.Api.Dynamic">
-      <HintPath>..\..\lib\SevenDigital.Api.Dynamic.dll</HintPath>
-    </Reference>
     <Reference Include="SevenDigital.Api.Schema">
       <HintPath>..\..\lib\SevenDigital.Api.Schema.dll</HintPath>
     </Reference>
