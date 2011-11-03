@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using System.Runtime.Serialization;
 using System.Xml;
 
 namespace SevenDigital.Api.Proxy.Acceptance.Tests
@@ -33,9 +32,15 @@ namespace SevenDigital.Api.Proxy.Acceptance.Tests
 		public HttpStatusCode GetStatusCode()
 		{
 			var request = PrepareRequest();
-			using(var webResponse = (HttpWebResponse)request.GetResponse())
-			{
-				return webResponse.StatusCode;
+			try {
+				using (var webResponse = (HttpWebResponse) request.GetResponse()) {
+					return webResponse.StatusCode;
+				}
+			} catch (WebException wex) {
+				if(wex.Response != null) {
+					return ((HttpWebResponse) wex.Response).StatusCode;
+				}
+				throw;
 			}
 		}
 
@@ -49,12 +54,19 @@ namespace SevenDigital.Api.Proxy.Acceptance.Tests
 		public string GetResponseAsString()
 		{
 			var request = PrepareRequest();
-			using (var webResponse = (HttpWebResponse)request.GetResponse())
-			{
-				using (var sr = new StreamReader(webResponse.GetResponseStream()))
-				{
-					return sr.ReadToEnd();
+			try {
+				using (var webResponse = (HttpWebResponse) request.GetResponse()) {
+					using (var sr = new StreamReader(webResponse.GetResponseStream())) {
+						return sr.ReadToEnd();
+					}
 				}
+			} catch (WebException wex) {
+				if (wex.Response != null) {
+					using (var sr = new StreamReader(wex.Response.GetResponseStream())) {
+						return sr.ReadToEnd();
+					}
+				}
+				throw;
 			}
 		}
 

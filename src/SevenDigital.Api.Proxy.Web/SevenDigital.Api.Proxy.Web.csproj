@@ -73,30 +73,25 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.aat.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.systest.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.uat.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.live.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SevenDigital.Api.Proxy\SevenDigital.Api.Proxy.csproj">
       <Project>{ECE6DBDD-A605-47AA-9E7E-94F720D72CFC}</Project>
       <Name>SevenDigital.Api.Proxy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\appSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\appSettings.live.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\appSettings.aat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\appSettings.systest.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\appSettings.uat.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
