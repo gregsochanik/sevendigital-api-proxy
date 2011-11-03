@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net;
-using System.Xml;
 
-namespace SevenDigital.Api.Proxy.Acceptance.Tests
+namespace SevenDigital.Api.Testing
 {
-	public class RequestBuilder
+	public class RequestBuilder : IRequestBuilder
 	{
 		private string _endpoint;
 		private string _accept;
@@ -42,13 +41,6 @@ namespace SevenDigital.Api.Proxy.Acceptance.Tests
 				}
 				throw;
 			}
-		}
-
-		public XmlDocument GetResponseAsXml()
-		{
-			var doc = new XmlDocument();
-			doc.LoadXml(GetResponseAsString());
-			return doc;
 		}
 
 		public string GetResponseAsString()

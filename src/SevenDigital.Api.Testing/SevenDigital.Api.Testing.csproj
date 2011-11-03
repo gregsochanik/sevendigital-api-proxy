@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{30BDCF07-64DB-4D4B-9B2E-A0B8D55BD3B2}</ProjectGuid>
+    <ProjectGuid>{DE7FAC53-CFD6-43DD-8E0C-C2600A2395F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SevenDigital.Api.Proxy.Acceptance.Tests</RootNamespace>
-    <AssemblyName>SevenDigital.Api.Proxy.Acceptance.Tests</AssemblyName>
+    <RootNamespace>SevenDigital.Api.Testing</RootNamespace>
+    <AssemblyName>SevenDigital.Api.Testing</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,17 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="SevenDigital.Api.Schema">
-      <HintPath>..\..\lib\SevenDigital.Api.Schema.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,20 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Given_a_proxy_to_a_get_endpoint\When_I_make_an_invalid_xml_request.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="IRequestBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Given_a_proxy_to_a_get_endpoint\When_I_make_a_valid_xml_request.cs" />
-    <Compile Include="Given_a_proxy_to_a_get_endpoint\When_I_make_a_valid_json_request.cs" />
-    <Compile Include="StringSerializationExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SevenDigital.Api.Testing\SevenDigital.Api.Testing.csproj">
-      <Project>{DE7FAC53-CFD6-43DD-8E0C-C2600A2395F3}</Project>
-      <Name>SevenDigital.Api.Testing</Name>
-    </ProjectReference>
+    <Compile Include="RequestBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

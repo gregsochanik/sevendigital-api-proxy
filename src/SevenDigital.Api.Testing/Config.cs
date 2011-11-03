@@ -1,6 +1,6 @@
-﻿using System.Configuration;
+using System.Configuration;
 
-namespace SevenDigital.Api.Proxy.Acceptance.Tests
+namespace SevenDigital.Api.Testing
 {
 	public static class Config
 	{

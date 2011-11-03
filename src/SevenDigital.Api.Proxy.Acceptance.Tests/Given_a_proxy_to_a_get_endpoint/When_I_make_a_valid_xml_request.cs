@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using NUnit.Framework;
 using SevenDigital.Api.Schema.ArtistEndpoint;
+using SevenDigital.Api.Testing;
 
 namespace SevenDigital.Api.Proxy.Acceptance.Tests.Given_a_proxy_to_a_get_endpoint
 {
