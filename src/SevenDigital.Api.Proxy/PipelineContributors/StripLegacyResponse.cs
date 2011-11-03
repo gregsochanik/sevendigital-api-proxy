@@ -6,7 +6,7 @@ using OpenRasta.Pipeline;
 using OpenRasta.Web;
 using SevenDigital.Api.Schema;
 
-namespace SevenDigital.Api.Proxy
+namespace SevenDigital.Api.Proxy.PipelineContributors
 {
 	public class StripLegacyResponse : IPipelineContributor
 	{
@@ -24,11 +24,14 @@ namespace SevenDigital.Api.Proxy
 
 		public PipelineContinuation StripResponseElement(ICommunicationContext context)
 		{
-			var passedApiUrl = (string)context.PipelineData["ApiUrl"];
+			var passedApiUrl 
+				= (string)context.PipelineData["ApiUrl"];
+
 			if (string.IsNullOrEmpty(passedApiUrl))
 				return PipelineContinuation.Continue;
 
-			var xmlDocument = (XmlDocument)context.PipelineData["ApiXmlResponse"];
+			var xmlDocument 
+				= (XmlDocument)context.PipelineData["ApiXmlResponse"];
 
 			// read and remove response header to get result
 			var responseElement = xmlDocument.SelectSingleNode("/response");
@@ -49,6 +52,7 @@ namespace SevenDigital.Api.Proxy
 				context.OperationResult = new OperationResult.OK(deserialized);
 			else
 				context.OperationResult = new OperationResult.BadRequest { ResponseResource = deserialized };
+
 			return PipelineContinuation.Continue;
 		}
 	}

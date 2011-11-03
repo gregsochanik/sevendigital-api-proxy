@@ -1,6 +1,7 @@
 ﻿using OpenRasta.Configuration;
 using OpenRasta.Web;
 using SevenDigital.Api.Proxy.Codecs;
+using SevenDigital.Api.Proxy.Handlers;
 
 namespace SevenDigital.Api.Proxy
 {

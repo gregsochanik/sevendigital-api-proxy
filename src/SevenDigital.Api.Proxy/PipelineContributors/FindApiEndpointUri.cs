@@ -3,9 +3,9 @@ using System.Linq;
 using OpenRasta.Pipeline;
 using OpenRasta.Web;
 
-namespace SevenDigital.Api.Proxy
+namespace SevenDigital.Api.Proxy.PipelineContributors
 {
-	public class ApiUrlPipelineContributor : IPipelineContributor
+	public class FindApiEndpointUri : IPipelineContributor
 	{
 		public void Initialize(IPipeline pipelineRunner)
 		{

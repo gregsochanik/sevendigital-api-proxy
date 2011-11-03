@@ -3,11 +3,12 @@ using NUnit.Framework;
 using OpenRasta.Pipeline;
 using OpenRasta.Web;
 using Rhino.Mocks;
+using SevenDigital.Api.Proxy.PipelineContributors;
 
 namespace SevenDigital.Api.Proxy.Unit.Tests
 {
 	[TestFixture]
-	public class ApiReaderPipelineContributorTests
+	public class FindApiEndpointUriTests
 	{
 		[Test]
 		public void Should_return_correct_path_from_web_path_and_pass_it_into_the_pipeline()
@@ -19,7 +20,7 @@ namespace SevenDigital.Api.Proxy.Unit.Tests
 			mockContext.Stub(x => x.Request).Return(mockRequest);
 			mockContext.Stub(x => x.PipelineData).Return(new PipelineData());
 
-			var apiReaderPipelineContributor = new ApiUrlPipelineContributor();
+			var apiReaderPipelineContributor = new FindApiEndpointUri();
 			PipelineContinuation routeApiRequest = apiReaderPipelineContributor.GetApiUrl(mockContext);
 
 			Assert.That(routeApiRequest, Is.EqualTo(PipelineContinuation.Continue));

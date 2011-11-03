@@ -1,6 +1,6 @@
 ﻿using OpenRasta.Web;
 
-namespace SevenDigital.Api.Proxy
+namespace SevenDigital.Api.Proxy.Handlers
 {
 	public class ApiProxyHandler
 	{

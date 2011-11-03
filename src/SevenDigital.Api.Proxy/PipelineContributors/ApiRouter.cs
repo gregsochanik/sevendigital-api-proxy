@@ -5,9 +5,9 @@ using System.Xml;
 using OpenRasta.Pipeline;
 using OpenRasta.Web;
 
-namespace SevenDigital.Api.Proxy
+namespace SevenDigital.Api.Proxy.PipelineContributors
 {
-	public class ApiRouterPipelineContributor : IPipelineContributor
+	public class ApiRouter : IPipelineContributor
 	{
 		public void Initialize(IPipeline pipelineRunner)
 		{

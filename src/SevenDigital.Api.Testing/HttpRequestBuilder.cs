@@ -4,25 +4,25 @@ using System.Net;
 
 namespace SevenDigital.Api.Testing
 {
-	public class RequestBuilder : IRequestBuilder
+	public class HttpRequestBuilder : IRequestBuilder
 	{
 		private string _endpoint;
 		private string _accept;
 		private string _queryString = "?";
 		
-		public RequestBuilder WithEndpoint(string endpoint)
+		public HttpRequestBuilder WithEndpoint(string endpoint)
 		{
 			_endpoint = endpoint;
 			return this;
 		}
 
-		public RequestBuilder WithAccept(string accept)
+		public HttpRequestBuilder WithAccept(string accept)
 		{
 			_accept = accept;
 			return this;
 		}
 
-		public RequestBuilder WithParameter(string key, string value)
+		public HttpRequestBuilder WithParameter(string key, string value)
 		{
 			_queryString += key + "=" + value + "&";
 			return this;

@@ -64,14 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiProxyHandler.cs" />
-    <Compile Include="ApiRouterPipelineContributor.cs" />
-    <Compile Include="ApiUrlPipelineContributor.cs" />
+    <Compile Include="Handlers\ApiProxyHandler.cs" />
+    <Compile Include="PipelineContributors\ApiRouter.cs" />
+    <Compile Include="PipelineContributors\FindApiEndpointUri.cs" />
     <Compile Include="Codecs\ServiceStackJsonCodec.cs" />
     <Compile Include="ConfigurationSource.cs" />
-    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="IOC\DependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StripLegacyResponse.cs" />
+    <Compile Include="PipelineContributors\StripLegacyResponse.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
