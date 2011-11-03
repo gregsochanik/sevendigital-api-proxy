@@ -35,7 +35,6 @@ namespace SevenDigital.Api.Proxy
 			var responseStatusAttribute = responseElement.Attributes["status"];
 			
 			var innerXml = responseElement.InnerXml;
-
 			var stringReader = new StringReader(innerXml);
 			
 			// get the type 

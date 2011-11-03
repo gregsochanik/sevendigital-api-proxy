@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
+using System.Runtime.Serialization;
 using System.Xml;
 
 namespace SevenDigital.Api.Proxy.Acceptance.Tests
@@ -60,10 +62,9 @@ namespace SevenDigital.Api.Proxy.Acceptance.Tests
 		{
 			string fullPath = Config.ApiBaseUrl + _endpoint + _queryString;
 			var httpWebRequest = (HttpWebRequest)WebRequest.Create(fullPath.TrimEnd('&'));
-			if(!string.IsNullOrEmpty(_accept))
+			if(!String.IsNullOrEmpty(_accept))
 				httpWebRequest.Accept = _accept;
 			return httpWebRequest;
 		}
-
 	}
 }

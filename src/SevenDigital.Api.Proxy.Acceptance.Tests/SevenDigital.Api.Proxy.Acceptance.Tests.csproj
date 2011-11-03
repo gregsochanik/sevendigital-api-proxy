@@ -35,9 +35,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="SevenDigital.Api.Schema">
+      <HintPath>..\..\lib\SevenDigital.Api.Schema.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +54,7 @@
     <Compile Include="Given_a_proxy_to_a_get_endpoint\When_I_make_a_valid_xml_request.cs" />
     <Compile Include="RequestBuilder.cs" />
     <Compile Include="Given_a_proxy_to_a_get_endpoint\When_I_make_a_valid_json_request.cs" />
+    <Compile Include="StringSerializationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
