@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.Proxy.Web"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.Proxy", "src\SevenDigital.Api.Proxy\SevenDigital.Api.Proxy.csproj", "{ECE6DBDD-A605-47AA-9E7E-94F720D72CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.Proxy.Unit.Tests", "src\SevenDigital.Api.Proxy.Unit.Tests\SevenDigital.Api.Proxy.Unit.Tests.csproj", "{64990B30-7F8C-4A02-B3BE-C3E3645A3C9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.Proxy.Unit.Tests", "src\SevenDigital.Api.Proxy.Unit.Tests\SevenDigital.Api.Proxy.Unit.Tests.csproj", "{76CB05C1-5652-4BF1-B037-57A2CFFB8D80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.Proxy.Acceptance.Tests", "src\SevenDigital.Api.Proxy.Acceptance.Tests\SevenDigital.Api.Proxy.Acceptance.Tests.csproj", "{30BDCF07-64DB-4D4B-9B2E-A0B8D55BD3B2}"
 EndProject
@@ -23,10 +23,10 @@ Global
 		{ECE6DBDD-A605-47AA-9E7E-94F720D72CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECE6DBDD-A605-47AA-9E7E-94F720D72CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECE6DBDD-A605-47AA-9E7E-94F720D72CFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64990B30-7F8C-4A02-B3BE-C3E3645A3C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64990B30-7F8C-4A02-B3BE-C3E3645A3C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64990B30-7F8C-4A02-B3BE-C3E3645A3C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64990B30-7F8C-4A02-B3BE-C3E3645A3C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76CB05C1-5652-4BF1-B037-57A2CFFB8D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CB05C1-5652-4BF1-B037-57A2CFFB8D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CB05C1-5652-4BF1-B037-57A2CFFB8D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CB05C1-5652-4BF1-B037-57A2CFFB8D80}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30BDCF07-64DB-4D4B-9B2E-A0B8D55BD3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30BDCF07-64DB-4D4B-9B2E-A0B8D55BD3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BDCF07-64DB-4D4B-9B2E-A0B8D55BD3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
