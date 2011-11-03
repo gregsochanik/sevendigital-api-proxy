@@ -1,5 +1,6 @@
 ﻿using OpenRasta.Configuration;
 using OpenRasta.Web;
+using SevenDigital.Api.Proxy.Codecs;
 
 namespace SevenDigital.Api.Proxy
 {
@@ -16,7 +17,8 @@ namespace SevenDigital.Api.Proxy
 					.AsXmlSerializer()
 					.ForMediaType(new MediaType("text/xml")).ForMediaType(MediaType.Xml)
 					.And
-					.AsJsonDataContract().ForMediaType(MediaType.Json);
+					.TranscodedBy<ServiceStackJsonCodec>()
+					.ForMediaType(MediaType.Json);
 			}
 		}
 	}

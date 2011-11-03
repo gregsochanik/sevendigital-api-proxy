@@ -48,6 +48,9 @@
     <Reference Include="OpenRasta.DI.Windsor">
       <HintPath>..\..\lib\OpenRasta.DI.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\packages\ServiceStack.Text.3.0.0\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="SevenDigital.Api.Schema">
       <HintPath>..\..\lib\SevenDigital.Api.Schema.dll</HintPath>
     </Reference>
@@ -64,12 +67,17 @@
     <Compile Include="ApiProxyHandler.cs" />
     <Compile Include="ApiRouterPipelineContributor.cs" />
     <Compile Include="ApiUrlPipelineContributor.cs" />
+    <Compile Include="Codecs\ServiceStackJsonCodec.cs" />
     <Compile Include="ConfigurationSource.cs" />
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StripLegacyResponse.cs" />
   </ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -54,7 +54,6 @@ namespace SevenDigital.Api.Proxy
 			xmlDocument.LoadXml(rawResponse);
 			context.PipelineData.Add("ApiXmlResponse", xmlDocument);
 
-
 			context.Request.Uri = new Uri(context.ApplicationBaseUri + "/");
 			
 			return PipelineContinuation.Continue;
